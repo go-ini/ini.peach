@@ -1,0 +1,31 @@
+<header>
+  <nav class="navbar fixed-top navbar-expand-lg navbar-dark light-blue scrolling-navbar">
+    <a class="navbar-brand" href="/"><strong>INI</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        {% for item in Navbar.Items %}
+          <li class="{% if item.Link == Link %}active{% endif %} nav-item">
+            <a class="nav-link" href="{{item.Link}}" {% if item.Blank %}target="_blank"{% endif %}>
+              {% if item.Icon %}<i class="{{item.Icon}}"></i> {% endif %}
+              {{Tr(Lang, item.Locale)}}
+              {% if item.Link == Link %}<span class="sr-only">(current)</span>{% endif %}
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+      <ul class="navbar-nav nav-flex-icons">
+        {% for lang in AllLangs %}
+          {% if Lang != lang.Lang %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{Link}}?lang={{lang.Lang}}"><i class="fa fa-language"></i> {{lang.Name}}</a>
+            </li>
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+  </nav>
+</header>
+            

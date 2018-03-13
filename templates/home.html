@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block title %}{{Tr(Lang, "name")}}: {{Tr(Lang, "tag_line")}}{% endblock %}
+{% block body %}
+	{% include Page.NavbarTplPath %}
+
+  <div class="view" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/gradient2.png');">
+    <div class="full-bg-img rgba-blue-slight">
+      <div class="container flex-center">
+        <div class="row pt-5 mt-5">
+          <div class="col-md-12 mb-3">
+            <div class="text-center">
+              <ul class="list-unstyled">
+                <li>
+                  <h1 class="display-4 font-weight-bold mb-5">INI</h1>
+                </li>
+                <li>
+                	<h3 class="mb-5">{{Tr(Lang, "tag_line")}}</h3>
+                </li>
+                <li>
+                  <a class="btn btn-outline-blue btn-rounded" href="/docs/intro/getting_started"><i class="fa fa-book left"></i> {{Tr(Lang, "home.learn_more")}}</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<section class="text-center features">
+    <h1 class="py-5 font-weight-bold">{{Tr(Lang, "home.features_title")}}</h1>
+    <p class="px-5 mb-5 pb-3 lead grey-text">{{Tr(Lang, "home.features_desc") | safe}}</p>
+    <div class="row text-left">
+      <div class="col-md-4 mb-5 feature">
+        <div class="col-1 col-md-2 float-left">
+	        <i class="fab fa-schlix blue-text fa-2x"></i>
+        </div>
+        <div class="col-10 col-md-9 col-lg-10 float-right">
+	        <h4 class="font-weight-bold">{{Tr(Lang, "home.feature_name_1")}}</h4>
+	        <p class="grey-text">{{Tr(Lang, "home.feature_desc_1") | safe}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-5 feature">
+        <div class="col-1 col-md-2 float-left">
+	        <i class="fab fa-connectdevelop pink-text fa-2x"></i>
+        </div>
+        <div class="col-10 col-md-9 col-lg-10 float-right">
+	        <h4 class="font-weight-bold">{{Tr(Lang, "home.feature_name_2")}}</h4>
+	        <p class="grey-text">{{Tr(Lang, "home.feature_desc_2") | safe}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-5 feature">
+        <div class="col-1 col-md-2 float-left">
+	        <i class="fab fa-modx purple-text fa-2x"></i>
+        </div>
+        <div class="col-10 col-md-9 col-lg-10 float-right">
+	        <h4 class="font-weight-bold">{{Tr(Lang, "home.feature_name_3")}}</h4>
+	        <p class="grey-text">{{Tr(Lang, "home.feature_desc_3") | safe}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-5 feature">
+        <div class="col-1 col-md-2 float-left">
+	        <i class="fab fa-joomla cyan-text fa-2x"></i>
+        </div>
+        <div class="col-10 col-md-9 col-lg-10 float-right">
+	        <h4 class="font-weight-bold">{{Tr(Lang, "home.feature_name_4")}}</h4>
+	        <p class="grey-text">{{Tr(Lang, "home.feature_desc_4") | safe}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-5 feature">
+        <div class="col-1 col-md-2 float-left">
+	        <i class="fa fa-braille indigo-text fa-2x"></i>
+        </div>
+        <div class="col-10 col-md-9 col-lg-10 float-right">
+	        <h4 class="font-weight-bold">{{Tr(Lang, "home.feature_name_5")}}</h4>
+	        <p class="grey-text">{{Tr(Lang, "home.feature_desc_5") | safe}}</p>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-5 feature">
+        <div class="col-1 col-md-2 float-left">
+	        <i class="fa fa-code teal-text fa-2x"></i>
+        </div>
+        <div class="col-10 col-md-9 col-lg-10 float-right">
+	        <h4 class="font-weight-bold">{{Tr(Lang, "home.feature_name_6")}}</h4>
+	        <p class="grey-text">{{Tr(Lang, "home.feature_desc_6") | safe}}</p>
+        </div>
+      </div>
+    </div>
+	</section>
+
+	{% include Page.FooterTplPath %}
+{% endblock %}

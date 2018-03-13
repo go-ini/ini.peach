@@ -1,0 +1,32 @@
+<footer class="page-footer font-small blue pt-4 mt-4">
+  <div class="container-fluid text-center text-md-left">
+    <div class="row">
+      <div class="col-md-6">
+        <h5 class="text-uppercase">{{Tr(Lang, "footer.license")}}</h5>
+        <p>{{Tr(Lang, "footer.license_desc", "https://github.com/go-ini/ini/blob/master/LICENSE") | safe}}</p>
+      </div>
+
+      <div class="col-md-6">
+        <h5 class="text-uppercase">{{Tr(Lang, "footer.thanks")}}</h5>
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://peachdocs.org/" target="_blank">Peach Docs</a>
+          </li>
+          <li>
+            <a href="https://fontawesome.com/" target="_blank">Font Awesome</a>
+          </li>
+          <li>
+            <a href="https://mdbootstrap.com/" target="_blank">Material Design for Bootstrap</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-copyright py-3 text-center">
+    © {{Year}} Copyright:
+    <a href="https://github.com/Unknwon"> @Unknwon </a>
+  </div>
+</footer>
+        
+{{Extension.GABlock | safe}}

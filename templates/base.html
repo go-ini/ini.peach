@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="{{Site.Desc}}" />
+
+		<link rel="shortcut icon" href="/img/favicon.ico" />
+		<link href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/css/mdb.min.css" rel="stylesheet">
+
+		{% if Asset.CustomCSS %}
+			<link href="{{Asset.CustomCSS}}" rel="stylesheet" />
+		{% endif %}
+
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.5.0/js/mdb.min.js"></script>
+		<script type="text/javascript" src="/js/emojify-1.1.0.min.js"></script>
+		<script type="text/javascript" src="/js/peach.js?v={{AppVer}}"></script>
+
+		{% if Extension.HighlightJSCustomCSS %}
+			<link rel="stylesheet" href="{{Extension.HighlightJSCustomCSS}}">
+		{% else %}
+			<link rel="stylesheet" href="/css/highlight-9.12.0/default.css">
+		{% endif %}
+		<script src="/js/highlight-9.12.0.pack.js"></script>
+		<script>hljs.initHighlightingOnLoad();</script>
+
+		<title>{% block title %}{{Title}}{% endblock %}</title>
+	</head>
+	<body>
+		{% block body %}{% endblock %}
+	</body>
+</html>

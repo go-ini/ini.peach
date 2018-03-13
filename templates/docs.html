@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% block title %}{{Title}} - {{Tr(Lang, "name")}}{% endblock %}
+{% block body %}
+	{% include Page.NavbarTplPath %}
+
+	<div class="container">
+		<div class="row pt-5 mt-5">
+			<div class="col-md-3 mb-3">
+				<nav class="devsite-section-nav devsite-nav nocontent">
+				  <ul class="devsite-nav-list">
+						{% if Toc %}
+							{% for node in Toc.Nodes %}
+					  		<li class="devsite-nav-item devsite-nav-item-heading">
+							  	{% if node.Plain %}
+							    	<span class="devsite-nav-title no-hover">{{node.Title}}</span>
+							    {% else %}
+							    	<a class="header" href="{{Page.DocsBaseURL}}/{{node.Name}}">{{node.Title}}</a>
+							    {% endif %}
+							  </li>
+					    	{% for file in node.Nodes %}
+					    		{% if file.Title %}
+					    			<li class="devsite-nav-item">
+					      			<a class="devsite-nav-title {% if Page.DocsBaseURL|add:"/"|add:node.Name|add:"/"|add:file.Name == Link %}devsite-nav-active{% endif %}" href="{{Page.DocsBaseURL}}/{{node.Name}}/{{file.Name}}">{{file.Title}}</a>
+					      		</li>
+					      	{% endif %}
+					      {% endfor %}
+						  {% endfor %}
+						{% else %}
+							<div class="item">
+								<div class="header">{{Tr(Lang, "docs.pages")}}</div>
+								<div class="menu">
+									{% for page in Pages %}
+										<a class="item" href="/{{page.Name}}">{{page.Title}}</a>
+									{% endfor %}
+								</div>
+							</div>
+						{% endif %}
+			  	</ul>
+			  </nav>
+			</div>
+
+			<div class="col-md-9 mb-3 markdown">
+				{% if IsShowingDefault %}
+					<div class="card">
+				    <div class="card-body info-color white-text">
+				      {{Tr(Lang, "docs.showing_default")}}
+				    </div>
+					</div>
+					<br>
+				{% endif %}
+				{% if Extension.EnableEditPage %}
+					<a class="ui blue button" id="edit_page" href="{{EditPageLink}}">{{Tr(Lang, "docs.edit_page")}}</a>
+				{% endif %}
+				{{Content | safe}}
+
+				{% if Extension.EnableDisqus %}
+					{% include Page.DisqusTplPath %}
+				{% endif %}
+			</div>
+		</div>
+	</div>
+
+	{% include Page.FooterTplPath %}
+{% endblock %}

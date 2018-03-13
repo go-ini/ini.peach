@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}{{Title}} - {{Tr(Lang, "name")}}{% endblock %}
+{% block body %}
+	{% include Page.NavbarTplPath %}
+
+	<br><br>
+  <div class="container flex-center">
+    <div class="row pt-5 mt-5">
+      <div class="col-md-12 mb-3">
+        <div class="text-center">
+          <ul class="list-unstyled">
+            <li>
+              <h1 class="display-4 font-weight-bold mb-5">{{Tr(Lang, "home.404_title")}}</h1>
+            </li>
+            <li>
+            	<h3 class="mb-5">{{Tr(Lang, "home.404_desc")}}</h3>
+            </li>
+            <li>
+            <a class="btn btn-outline-green btn-rounded" href="/"> {{Tr(Lang, "home.back_home")}}</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	{% include Page.FooterTplPath %}
+{% endblock %}

@@ -1,0 +1,107 @@
+.navbar-nav .nav-item .nav-link {
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+div.view {
+	padding-top: 50px;
+}
+div.view .container {
+	padding-bottom: 50px;
+}
+
+section.features .row {
+	width: 100%;
+}
+section.features .feature {
+	padding-left: 30px;
+	padding-right: 0;
+}
+
+.devsite-section-nav {
+	background: #f7f7f7;
+    float: left;
+    margin-right: 40px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 16px 12px 16px 16px;
+    width: 100%;
+    font-size: 14px;
+}
+.devsite-nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+.devsite-nav-item {
+    line-height: 16px;
+    margin: 8px 0 0;
+    position: relative;
+}
+.devsite-nav-list >.devsite-nav-item-heading {
+	border-top: 1px solid #cfd8dc;
+    margin: 15px -16px 0;
+    padding: 16px 16px 0;
+}
+.devsite-nav-list >.devsite-nav-item-heading:first-child {
+	border-top: none;
+	padding-top: 0;
+	margin-top: 0;
+}
+.devsite-nav-item-heading {
+    font-weight: bold;
+}
+.devsite-nav-title {
+	color: #212121;
+}
+.devsite-nav-title:not(.no-hover):hover {
+	text-decoration: none;
+    color: #039be5 !important;
+}
+.devsite-nav-active {
+    color: #039be5;
+    font-weight: 500;
+}
+
+.markdown a {
+    color: #039be5;
+    outline: 0;
+    text-decoration: none;
+}
+.markdown a:hover {
+    text-decoration: underline;
+}
+.markdown h1 .fa-hashtag,
+.markdown h2 .fa-hashtag,
+.markdown h3 .fa-hashtag,
+.markdown h4 .fa-hashtag,
+.markdown h5 .fa-hashtag,
+.markdown h6 .fa-hashtag {
+  display: none;
+  color: #9e9e9e;
+  vertical-align: middle;
+  font-size: 0.7em;
+  padding-left: 5px;
+}
+.markdown h1:hover .anchor,
+.markdown h2:hover .anchor,
+.markdown h3:hover .anchor,
+.markdown h4:hover .anchor,
+.markdown h5:hover .anchor,
+.markdown h6:hover .anchor {
+  text-decoration: none;
+}
+.markdown h1:hover .anchor .fa-hashtag,
+.markdown h2:hover .anchor .fa-hashtag,
+.markdown h3:hover .anchor .fa-hashtag,
+.markdown h4:hover .anchor .fa-hashtag,
+.markdown h5:hover .anchor .fa-hashtag,
+.markdown h6:hover .anchor .fa-hashtag {
+  display: inline-block;
+}
+
+.hljs {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+pre code.hljs {
+  padding: 15px;
+}
